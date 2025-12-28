@@ -111,10 +111,11 @@ ax.set_xlim(0, None)
 ax.set_ylim(0, None)
 
 plt.tight_layout()
+plt.savefig(os.path.join(figures_dir, 'fig1_fare_distance_regression.eps'), format='eps')
 plt.savefig(os.path.join(figures_dir, 'fig1_fare_distance_regression.pdf'))
 plt.savefig(os.path.join(figures_dir, 'fig1_fare_distance_regression.png'))
 plt.close()
-print("   Saved: fig1_fare_distance_regression.pdf/png")
+print("   Saved: fig1_fare_distance_regression.eps/pdf/png")
 
 # =====================================================================
 # FIGURE 2: FARE COMPONENT BREAKDOWN (PIE CHART)
@@ -169,10 +170,11 @@ ax.text(0, 0, f'Total\n₹{total:,.0f}', ha='center', va='center', fontsize=12, 
 ax.set_title('Fare Component Breakdown', fontsize=14, fontweight='bold')
 
 plt.tight_layout()
+plt.savefig(os.path.join(figures_dir, 'fig2_fare_components.eps'), format='eps')
 plt.savefig(os.path.join(figures_dir, 'fig2_fare_components.pdf'))
 plt.savefig(os.path.join(figures_dir, 'fig2_fare_components.png'))
 plt.close()
-print("   Saved: fig2_fare_components.pdf/png")
+print("   Saved: fig2_fare_components.eps/pdf/png")
 
 # =====================================================================
 # FIGURE 3: DRIVER EARNINGS DISTRIBUTION
@@ -248,10 +250,11 @@ ax2.text(0.6, 0.2, f'Gini Coefficient\n= {gini:.4f}', fontsize=11,
          bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.8))
 
 plt.tight_layout()
+plt.savefig(os.path.join(figures_dir, 'fig3_earnings_distribution.eps'), format='eps')
 plt.savefig(os.path.join(figures_dir, 'fig3_earnings_distribution.pdf'))
 plt.savefig(os.path.join(figures_dir, 'fig3_earnings_distribution.png'))
 plt.close()
-print("   Saved: fig3_earnings_distribution.pdf/png")
+print("   Saved: fig3_earnings_distribution.eps/pdf/png")
 
 # =====================================================================
 # FIGURE 4: TEMPORAL PATTERNS (HOURLY DISTRIBUTION)
@@ -322,10 +325,11 @@ ax.text(0.98, 0.95, summary_text, transform=ax.transAxes, fontsize=9,
         bbox=dict(boxstyle='round', facecolor='white', alpha=0.9))
 
 plt.tight_layout()
+plt.savefig(os.path.join(figures_dir, 'fig4_temporal_patterns.eps'), format='eps')
 plt.savefig(os.path.join(figures_dir, 'fig4_temporal_patterns.pdf'))
 plt.savefig(os.path.join(figures_dir, 'fig4_temporal_patterns.png'))
 plt.close()
-print("   Saved: fig4_temporal_patterns.pdf/png")
+print("   Saved: fig4_temporal_patterns.eps/pdf/png")
 
 # =====================================================================
 # SUMMARY
@@ -334,11 +338,11 @@ print("\n" + "=" * 70)
 print("FIGURE GENERATION COMPLETE")
 print("=" * 70)
 print(f"\nAll figures saved to: {os.path.abspath(figures_dir)}")
-print("\nGenerated files:")
-print("  1. fig1_fare_distance_regression.pdf/png - Fare vs Distance regression")
-print("  2. fig2_fare_components.pdf/png - Fare component breakdown")
-print("  3. fig3_earnings_distribution.pdf/png - Driver earnings with Lorenz curve")
-print("  4. fig4_temporal_patterns.pdf/png - Hourly trip distribution")
-print("\nThese figures can be included in the LaTeX paper using:")
-print("  \\includegraphics[width=\\textwidth]{figures/fig1_fare_distance_regression}")
+print("\nGenerated files (EPS, PDF, PNG formats):")
+print("  1. fig1_fare_distance_regression - Fare vs Distance regression")
+print("  2. fig2_fare_components - Fare component breakdown")
+print("  3. fig3_earnings_distribution - Driver earnings with Lorenz curve")
+print("  4. fig4_temporal_patterns - Hourly trip distribution")
+print("\nFor LaTeX (Springer/IEEE), use EPS format:")
+print("  \\includegraphics[width=\\textwidth]{figures/fig1_fare_distance_regression.eps}")
 print("=" * 70)
