@@ -22,7 +22,10 @@ build/
 *.synctex.gz
 *.fdb_latexmk
 *.fls
-*.pdf
+sample_paper_format.tex
+
+# Allow figures folder (PDFs and PNGs for paper)
+!figures/
 
 # IDE
 .vscode/
@@ -45,3 +48,4 @@ trip_activity/*.csv
 analysis_output.txt
 *.png
 figures/
+sample_paper_format.tex
