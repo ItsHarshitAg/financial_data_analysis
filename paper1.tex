@@ -33,14 +33,17 @@
 %
 \titlerunning{Financial Analytics for Ride-Sharing Fleet}
 %
-\author{\underline{[Author Name]}\inst{1}[XXXX-XXXX-XXXX-XXXX (ORCID ID)]}
+\author{\underline{Harshit Agarwal}\inst{1}[0009-0009-8895-4995 (ORCID ID)] \and Dr. Cynthia T$^*$\inst{1}[0009-0009-4651-8079 (ORCID ID)]}
 %
-\authorrunning{[Author Name]}
+\authorrunning{Harshit Agarwal et al.}
 %
-\tocauthor{[Author Name]}
+\tocauthor{Harshit Agarwal, Dr. Cynthia T}
 %
-\institute{[Institution Name], [City], India,\\
-\email{[email@institution.edu]} (\underline{presenting author})}
+\institute{Christ University, Bangalore, India,\\
+\email{harshitagarwal1229@gmail.com} (\underline{presenting author}),\\
+\and
+Christ University, Bangalore, India,\\
+\email{cynthiasamabi@gmail.com} ($^*$corresponding author)}
 
 \maketitle
 
@@ -192,6 +195,15 @@ Wait Time Charges & 122.65 & 0.1\% \\
 \end{center}
 \end{table}
 
+Figure~\ref{fig:farecomponents} provides a visual representation of the fare component distribution, clearly illustrating the dominance of base fare in the revenue structure.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig2_fare_components}
+\caption{Fare component breakdown showing the relative contribution of each component to total fare revenue. Base fare dominates at 89.2\%, followed by booking fee at 7.5\%.}
+\label{fig:farecomponents}
+\end{figure}
+
 The low contribution of surge pricing (0.7\%) indicates that the data was collected during a period of relatively stable demand-supply equilibrium.
 
 \subsection{Driver Earnings Analysis}
@@ -218,6 +230,15 @@ Gini Coefficient & 0.2814 \\
 \end{table}
 
 The Gini coefficient of 0.2814 indicates moderate inequality in earnings distribution. This value is lower than typical income inequality measures in developing economies (typically 0.35-0.45), suggesting that fleet operations provide relatively equitable earning opportunities.
+
+Figure~\ref{fig:earnings} visualizes the driver earnings distribution and the corresponding Lorenz curve, which graphically represents the earnings inequality among drivers.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/fig3_earnings_distribution}
+\caption{Driver earnings analysis: (Left) Histogram showing the distribution of total earnings per driver with kernel density estimate. (Right) Lorenz curve illustrating earnings inequality with Gini coefficient of 0.2814.}
+\label{fig:earnings}
+\end{figure}
 
 The average earnings per trip was \rupee 303.08 with a median of \rupee 283.71. Drivers completed an average of 8.0 trips during the observation period.
 
@@ -303,6 +324,15 @@ The model statistics are:
 
 The high $R^2$ value indicates that distance explains 89.68\% of fare variance. The intercept of \rupee 73.50 represents the effective base fare, while the slope of \rupee 14.64/km represents the distance-based fare component.
 
+Figure~\ref{fig:regression} visualizes the fare-distance relationship with the fitted regression line and 95\% confidence interval, demonstrating the strong linear relationship between these variables.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/fig1_fare_distance_regression}
+\caption{Scatter plot of fare versus trip distance with linear regression line. The model achieves $R^2 = 0.8968$, indicating that distance explains approximately 90\% of fare variance. Shaded region represents the 95\% confidence interval.}
+\label{fig:regression}
+\end{figure}
+
 \subsection{Payment Mode Analysis}
 Cash remains the predominant payment mode:
 \begin{itemize}
@@ -321,7 +351,14 @@ Trip distribution across time periods shows relatively uniform demand:
 \item Night (12AM-6AM): 58 trips (11.7\%)
 \end{itemize}
 
-Peak hours were identified as 21:00-22:00 (34 trips) and 11:00-12:00 (33 trips).
+Peak hours were identified as 21:00-22:00 (34 trips) and 11:00-12:00 (33 trips). Figure~\ref{fig:temporal} provides a detailed visualization of the hourly trip distribution.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/fig4_temporal_patterns}
+\caption{Hourly distribution of trip requests showing demand patterns across different time periods. Colors indicate time period categories: Night (00-06), Morning (06-12), Afternoon (12-18), and Evening (18-24). Peak demand occurs during evening hours.}
+\label{fig:temporal}
+\end{figure}
 
 \subsection{Driver Performance Metrics}
 Driver completion rates show significant variation:
@@ -388,7 +425,7 @@ The framework provides a template for fleet operators to analyze their operation
 \vspace{1cm}
 \noindent
 \textbf{Data Availability Statement}\\
-The anonymized datasets and analysis code used in this study are available at [GitHub Repository URL]. All personally identifiable information has been removed from the datasets.
+The anonymized datasets and analysis code used in this study are publicly available at \url{https://github.com/ItsHarshitAg/financial_data_analysis}. All personally identifiable information has been removed from the datasets, including driver names, exact addresses, and original timestamps. Dates have been shifted by a fixed offset to preserve temporal patterns while protecting privacy.
 
 \vspace{0.5cm}
 \noindent
